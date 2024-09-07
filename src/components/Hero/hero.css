@@ -1,0 +1,100 @@
+/* Default Styles */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(236, 182, 234, 0.5), rgba(255, 255, 255, 0.5) 60%);
+  padding: 0 100px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 20px;
+}
+
+.hero-left h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.hero-left p {
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #626262;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #c184ab;
+  color: white;
+  border: 2px solid #c184ab;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+}
+
+.hero-button:hover {
+  background-color: #a5678b;
+  color: white;
+}
+
+.hero-right img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-left {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-left h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-left p {
+    font-size: 1.5rem;
+  }
+
+  .hero-button {
+    width: auto;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-button img {
+    margin-left: 0.5rem;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: auto;
+  }
+}

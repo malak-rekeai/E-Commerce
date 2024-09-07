@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  background-color: #f8f9fa; /* Adjust to your desired color */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+button{
+  background-color: #c184ab;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

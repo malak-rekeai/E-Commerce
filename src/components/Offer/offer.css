@@ -1,0 +1,74 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px;
+  }
+  
+  .offers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(180deg, rgba(240, 196, 238, 0.5), rgba(255, 255, 255, 0.5) 60%);
+  }
+  
+  .offers-left {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .offers-left h1 {
+    font-size: 2.5rem;
+    color: #374151;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .offers-left p {
+    font-size: 1.2rem;
+    color: #6B7280;
+    margin-top: 20px;
+  }
+  
+  .offers-left button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background-color: #e0aaff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .offers-left button:hover {
+    background-color: #d48cff;
+  }
+  
+  .offers-right img {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  @media (max-width: 768px) {
+    .offers {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .offers-left {
+      max-width: 100%;
+      align-items: center;
+    }
+  
+    .offers-right img {
+      max-width: 80%;
+      margin-top: 20px;
+    }
+  }
+  

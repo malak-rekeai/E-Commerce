@@ -1,0 +1,122 @@
+/* Default Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar_logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav_menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    font-weight: 500;
+    color: #626262;
+    list-style: none;
+  }
+  
+  .nav_menu li {
+    display: flex;
+  }
+  
+  .nav-btn {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 500;
+    color: #626262;
+  }
+  
+  .nav-btn button {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid #c184ab;
+    color: #c184ab;
+  }
+  
+  .cart-items {
+    background-color: #c184ab;
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-top: -30px;
+    margin-left: -27px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      position: relative;
+    }
+  
+    .navbar_logo {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-toggle {
+      display: none; /* Initially hidden */
+      cursor: pointer;
+    }
+  
+    .nav_menu {
+      display: none; /* Initially hidden */
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      position: absolute;
+      top: 60px; /* Adjust based on logo and padding */
+      left: 0;
+      z-index: 1000;
+    }
+  
+    .nav_menu.open {
+      display: flex;
+    }
+  
+    .nav_menu li {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .nav-btn {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    .nav-btn button {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .cart-items {
+      margin-top: 0;
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.2rem 0.6rem;
+    }
+  }
+  
