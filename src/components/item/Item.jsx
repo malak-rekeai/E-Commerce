@@ -5,7 +5,7 @@ import './item.css';
 const Item = (props) => {
   return (
     <div className='item'>
-      <Link to={`/product/${props.id}`}> 
+      <Link to={`/product/${props.id}`}>
         <img src={props.image} alt={props.name} />
       </Link>
       <p>{props.name}</p>

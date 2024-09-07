@@ -46,7 +46,7 @@
   
   .new-price {
     font-size: 1.5rem;
-    color: #e60023;
+    color: #c184ab;
     font-weight: 700;
   }
   
@@ -57,7 +57,7 @@
   }
   
   .add-to-cart-btn {
-    background-color: #ff6200;
+    background-color: #c184ab;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,7 +67,7 @@
   }
   
   .add-to-cart-btn:hover {
-    background-color: #ff4700;
+    background-color: #c184ab;
   }
   
   .breadcrum {
@@ -79,5 +79,104 @@
   .breadcrum img {
     margin: 0 5px;
     vertical-align: middle;
+  }
+  .product-sizes {
+    margin-bottom: 20px;
+  }
+  
+  .product-sizes h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .size-options {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .size-options label {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .size-options input[type="radio"] {
+    display: none;
+  }
+  
+  .size-options label:hover {
+    background-color: #c184ab;
+    color: white;
+  }
+  
+  .size-options input[type="radio"]:checked + label {
+    background-color: #c184ab;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .product-page {
+      padding: 20px;
+    }
+  
+    .product-details {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .product-image img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .product-info h1 {
+      font-size: 1.8rem;
+    }
+  
+    .product-description {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  
+    .product-prices {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    .new-price, .old-price {
+      font-size: 1.2rem;
+    }
+  
+    .add-to-cart-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  
+    .breadcrum {
+      font-size: 0.9rem;
+    }
+    .size-options {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    
+      .size-options label {
+        padding: 8px 15px;
+      }
+    
+      .product-sizes h3 {
+        font-size: 1rem;
+        text-align: center;
+      }
   }
   

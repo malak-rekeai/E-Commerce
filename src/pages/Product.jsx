@@ -1,18 +1,16 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Breadcurm from '../components/Breadcrum/Breadcurm';
 import { ShopContext } from '../context/ShopContext';
+import Breadcurm from '../components/Breadcrum/Breadcurm';
 import '../style/product.css';
 
 const Product = () => {
   const { all_products } = useContext(ShopContext);
   const { product_id } = useParams();
-
-  // Convert product_id to a string if the ID in products is a string
-  const product = all_products.find((e) => e.id.toString() === product_id);
+  const product = all_products.find(p => p.id === parseInt(product_id));
 
   if (!product) {
-    return <div>Product not found!</div>;
+    return <p>Product not found</p>;
   }
 
   return (
@@ -24,12 +22,20 @@ const Product = () => {
         </div>
         <div className='product-info'>
           <h1>{product.name}</h1>
-          <p className='product-description'>
-            This is a detailed description of {product.name}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <p className='product-description'>{product.description}</p>
           <div className='product-prices'>
-            <span className='new-price'>${product.new_price}</span>
-            <span className='old-price'>${product.old_price}</span>
+            <p className='new-price'>${product.new_price}</p>
+            {product.old_price && <p className='old-price'>${product.old_price}</p>}
+          </div>
+          <div className='sizes'>
+            <label htmlFor='sizes'>Select Size:</label>
+            <select id='sizes'>
+              <option value='s'>S</option>
+              <option value='m'>M</option>
+              <option value='l'>L</option>
+              <option value='xl'>XL</option>
+              <option value='xxl'>XXL</option>
+            </select>
           </div>
           <button className='add-to-cart-btn'>Add to Cart</button>
         </div>
