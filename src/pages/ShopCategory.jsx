@@ -14,6 +14,7 @@ const ShopCategory = (props) => {
       <div className='allProduct'>
         <div className='shopCategory_index'>
           <p>Enjoy Your Shopping!</p>
+          
         </div>
         <div className='shopCategory_items'>
           {all_products
