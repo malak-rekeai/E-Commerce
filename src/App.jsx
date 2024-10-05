@@ -1,21 +1,26 @@
-import React from 'react'
+import React , {lazy, Suspense} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Shop from './pages/Shop'
-import ShopCategory from './pages/ShopCategory'
-import Cart from './pages/Cart'
-import Login from './pages/Login'
 import Footer from './components/Footer/Footer'
 import men_banner from './Assets/banner_mens.png'
 import women_banner from './Assets/banner_women.png'
 import kids_banner from './Assets/banner_kids.png'
-import Product from './pages/Product'
+
+
+const ShopCategory = lazy(() => import('./pages/ShopCategory'))
+const Cart = lazy(() => import('./pages/Cart'))
+const Login = lazy(() => import('./pages/Login'))
+const Product = lazy(() => import('./pages/Product'))
+
+
 
 
 const App = () => {
   return (
     <div className=''>
   <Navbar />
+  <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path='/' element={<Shop />} />
         <Route path='/men' element={<ShopCategory banner={men_banner} category="men"/>} />
@@ -25,6 +30,7 @@ const App = () => {
         <Route path='/login' element= {<Login />} />
         <Route path='/product/:product_id' element= {<Product />} />
       </Routes>
+    </Suspense>
       <Footer />
 
     </div>
